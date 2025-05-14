@@ -4,7 +4,7 @@ function Test-Url {
     param (
         [string]$url
     )
-    $maxRetries = 1
+    $maxRetries = 2
     $retryCount = 0
     $errorCode = $null
 
@@ -89,7 +89,6 @@ try {
                 }
                 Write-Host ""  # Blank line
             }
-            # Start-Sleep -Seconds 1  # Add a delay between requests to avoid rate limiting
         }
 
         # Export the results to a new CSV file
