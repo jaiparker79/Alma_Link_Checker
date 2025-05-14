@@ -4,7 +4,7 @@ This PowerShell script checks URLs exported in XLSX format from the Alma library
 
 To run this script:
 
-Export a list of Portfolios for checking from Alma. Ensure you do the Extended Export, so that Row 58 matches the Web Address field the script checks.  The XLSX file name format must end in _portfolios.xlsx for the script to pick it up.
+Export a list of Portfolios for checking from Alma. Ensure you do the Extended Export, so that Row 58 matches the Web Address field the script checks and Row 12 matches the MMS ID for the output.  The XLSX file name format must end in _portfolios.xlsx for the script to pick it up.
 
 Input
 URLs are fed into the script via XLSX files. Files must be named to match the pattern *_portfolios.xlsx (for example Freely_Available_Website_portfolios.xlsx). When it runs, the script will start checking URLs in Row 58 of the first xlsx file it finds with a matching filename pattern.
