@@ -19,7 +19,7 @@ For every URL in Row 58, the script will flag it as broken if:
 * the connection terminates incorrectly, or
 * the webserver returns a "400 Bad Request" response
 * the webserver returns a "404 Not Found" response
-* the webserver returns a 500 - 599 range response
+* the webserver returns a 500 - 599 range server error response
 * the webserver returns a 301 OR 308 redirect response AND the URL redirected to is a domain. This is to pick up where a deep link to a page or file redirects to the homepage of an organisation.
 
 Other error values (e.g. "401 Not authorised", "403 Forbidden") are not flagged by this script.
