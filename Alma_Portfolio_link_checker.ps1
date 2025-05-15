@@ -4,7 +4,7 @@ function Test-Url {
     param (
         [string]$url
     )
-    $maxRetries = 2
+    $maxRetries = 3
     $retryCount = 0
     $errorCode = $null
 
