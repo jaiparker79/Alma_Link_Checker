@@ -8,7 +8,7 @@ To run this script:
 2. Right click the script and select "Run with PowerShell" and follow any prompts to allow the script to run.
 
 ### Input
-URLs are fed into the script via XLSX files. Files must be named to match the pattern *_portfolios.xlsx (for example Freely_Available_Website_portfolios.xlsx). When it runs, the script will start checking URLs in Row 58 of the first xlsx file it finds with a matching filename pattern.
+URLs are fed into the script via XLSX files. Files must be named to match the pattern *_portfolios.xlsx (for example Freely+Available+Website_portfolios.xlsx). When it runs, the script will start checking URLs in Row 58 of the first xlsx file it finds with a matching filename pattern.
 
 ### Errors
 
@@ -25,5 +25,5 @@ For every URL in Row 58, the script will flag it as broken if:
 Other error values (e.g. "401 Not authorised", "403 Forbidden") are not flagged by this script.
 
 ### Output
-It will produce a CSV file of the broken links named broken-links.csv
-This report file contains one column, the MMS ID of the Portfolio containing the broken link.
+It will produce a CSV file of MMS IDs named broken-links.csv
+This report file contains two column, the MMS ID of the Portfolio containing the broken link and the Error Code identified.
