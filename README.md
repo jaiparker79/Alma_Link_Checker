@@ -1,6 +1,6 @@
 # Alma_Link_Checker
 
-This PowerShell script checks URLs exported in XLSX format from the Alma library system. It was made by Jai Parker, Information Access Librarian at the Queensland University of Technology with help from Microsoft Copilot. As per the license, caveat emptor.
+This PowerShell script checks URLs exported in XLSX format from the Alma library system. It was made by Jai Parker, Information Access Librarian at the Queensland University of Technology with help from Microsoft Copilot. As per the [license](./LICENSE), caveat emptor.
 
 To run this script:
 
