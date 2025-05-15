@@ -11,12 +11,9 @@ function Test-Url {
     while ($retryCount -lt $maxRetries -and $errorCode -eq $null) {
         try {
             $response = Invoke-WebRequest -Uri $url -Method Head -TimeoutSec 30 -Headers @{"User-Agent"="Mozilla/5.0"} -MaximumRedirection 5 -ErrorAction Stop
-         	# Test for 400 Bad request and 404 Not Found and to see if the remote web server is a teapot
+         	# Test for 400 Bad request and 404 Not Found
 			if ($response.StatusCode -eq 400 -or $response.StatusCode -eq 404) {
                 return $response.StatusCode
-	# Test if the remote web server is a teapot	
-            } elseif ($response.StatusCode -eq 418) {
-                return "I'm a teapot"
 	# Test fo HTTP 500 error codes	
 			elseif ($response.StatusCode -ge 500 -and $response.StatusCode -lt 600) {
                 return "Server Error $($response.StatusCode)"
