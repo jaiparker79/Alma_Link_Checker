@@ -19,7 +19,7 @@ function Test-Url {
                 return "Server Error $($response.StatusCode)"
             }
 	#Test if a long URL redirects to a domain
-            } elseif ($response.StatusCode -eq 301 -or $response.StatusCode -eq 308) {
+            } elseif ($response.StatusCode -ge 300 -and $response.StatusCode -lt 400) {
                 $finalUrl = $response.Headers.Location
                 if ($finalUrl -match "^https?://[^/]+/?$") {
                     return "$response.StatusCode - Redirected to domain"
