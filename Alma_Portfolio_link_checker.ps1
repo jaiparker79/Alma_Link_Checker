@@ -10,7 +10,7 @@ function Test-Url {
 
     while ($retryCount -lt $maxRetries -and $errorCode -eq $null) {
         try {
-            $response = Invoke-WebRequest -Uri $url -Method Head -TimeoutSec 90 -Headers @{"User-Agent"="Mozilla/5.0"} -MaximumRedirection 5 -ErrorAction Stop
+            $response = Invoke-WebRequest -UseBasicParsing -Uri $url -Method Head -TimeoutSec 90 -Headers @{"User-Agent"="Mozilla/5.0"} -MaximumRedirection 5 -ErrorAction Stop
          	# Test for 400 Bad request and 404 Not Found
 			if ($response.StatusCode -eq 400 -or $response.StatusCode -eq 404) {
                 return $response.StatusCode
@@ -104,3 +104,4 @@ try {
 # Keep the PowerShell window open
 Read-Host -Prompt "Press Enter to exit"
 # End Alma Portfilios link checking script
+
