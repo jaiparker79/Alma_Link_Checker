@@ -15,12 +15,12 @@ URLs are fed into the script via XLSX files. Files must be named to match the pa
 For every URL in Row 58, the script will flag it as broken if:
 
 * the hostname in the URL cannot be resolved (i.e. DNS error)
-* a connection timeout occurs (by default this is 30 seconds)
+* a connection timeout occurs (by default this is 90 seconds)
 * the connection terminates incorrectly, or
-* the webserver returns a "400 Bad Request" response
 * the webserver returns a "404 Not Found" response
-* the webserver returns a 500 - 599 range server error response
-* the webserver returns a 301 OR 308 redirect response AND the URL redirected to is a domain. This is to pick up where a deep link to a page or file redirects to the homepage of an organisation.
+* the webserver returns a "405 Method Not Allowed" response
+* the webserver returns a 500 server error response
+* the webserver returns a 301 redirect response AND the URL redirected to is a domain. This is to pick up where a deep link to a page or file redirects to the homepage of an organisation.
 
 Other error values (e.g. "401 Not authorised", "403 Forbidden") are _not_ flagged by this script.
 
